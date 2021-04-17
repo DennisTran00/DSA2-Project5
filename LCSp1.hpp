@@ -14,8 +14,13 @@ class LCSp1
 	private:
 		std::string string1;
 		std::string string2;
+		int** cArray;
+		int m;
+		int n;
 	public:
 		LCSp1();
+		~LCSp1();
+		void buildCArray();
 		void setString1(std::string string1);
 		void setString2(std::string string2);
 		std::string getString1();
