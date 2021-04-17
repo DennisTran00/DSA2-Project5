@@ -8,6 +8,7 @@
 #define LCSP1_HPP
 
 #include <string>
+#include <iostream>
 
 class LCSp1
 {
@@ -25,6 +26,8 @@ class LCSp1
 		void setString2(std::string string2);
 		std::string getString1();
 		std::string getString2();
+		void printLCS(int i, int j);
+		void printChar(int i);
 
 };
 

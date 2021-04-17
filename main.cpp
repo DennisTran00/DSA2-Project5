@@ -15,6 +15,14 @@ int main () {
 	std::cout << part1.getString1() << std::endl;
 	std::cout << std::endl;
 	std::cout << part1.getString2() << std::endl;
+	std::cout << std::endl;
+
+	part1.buildCArray();
+
+	int i = part1.getString1().length();
+	int j = part1.getString2().length();
+
+	part1.printLCS(i,j);
 
 
 	return 0;

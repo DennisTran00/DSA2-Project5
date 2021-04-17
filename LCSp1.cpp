@@ -39,12 +39,29 @@ void LCSp1::buildCArray() {
 			} else {
 				if (cArray[i-1][j] >= cArray[i][j-1]) {
 					cArray[i][j] = cArray[i-1][j];
-				}else {
+				} else {
 					cArray[i][j] = cArray[i][j-1];
 				}
 			}
 		}
 	}
+}
+
+void LCSp1::printLCS(int i, int j) {
+	if(i == 0 || j == 0) {
+		return;
+	} else if (string1[i-1] == string2[j-1]) {
+		printLCS(i-1,j-1);
+		printChar(i-1);
+	} else if (cArray[i-1][j] >= cArray[i][j-1]) {
+		printLCS(i-1,j);
+	} else {
+		printLCS(i,j-1);
+	}
+}
+
+void LCSp1::printChar(int i) {
+	std::cout << this->string1[i];
 }
 
 void LCSp1::setString1(std::string string1) {
