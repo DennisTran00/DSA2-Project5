@@ -15,8 +15,11 @@ class LCSp1
 		std::string string1;
 		std::string string2;
 	public:
+		LCSp1();
 		void setString1(std::string string1);
 		void setString2(std::string string2);
+		std::string getString1();
+		std::string getString2();
 
 };
 
