@@ -2,6 +2,8 @@
   Student Name: Dennis Tran
   File Name: file-reader.cpp
   DSA II Project #5
+  Reads the strings from twoStrings.txt
+  sets string1 and string2 in the LCSp1 class
 ***************************************************************/
 
 #include "file-reader.hpp"
@@ -24,7 +26,7 @@ FileReader::~FileReader () {
 }
 
 
-//
+//Takes the two strings from twoStrings.txt and sets string1 and string2 respectively
 void FileReader::LoadData (LCSp1 & l) {
 	std::string s1 = "";
 	std::string s2 = "";

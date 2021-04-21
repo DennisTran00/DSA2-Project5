@@ -1,3 +1,10 @@
+/***************************************************************
+  Student Name: Dennis Tran
+  File Name: main.cpp
+  DSA II Project #5
+  runs both part1 and part2 of the project
+***************************************************************/
+
 #include <iostream>
 #include "file-reader.hpp"
 
@@ -12,17 +19,13 @@ int main () {
 
 	reader.LoadData(part1);
 
-	std::cout << part1.getString1() << std::endl;
-	std::cout << std::endl;
-	std::cout << part1.getString2() << std::endl;
-	std::cout << std::endl;
-
 	part1.buildCArray();
 
 	int i = part1.getString1().length();
 	int j = part1.getString2().length();
 
-	part1.printLCS(i,j);
+	part1.constructLCS(i,j);
+	part1.printLCS();
 
 
 	return 0;

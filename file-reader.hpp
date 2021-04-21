@@ -2,6 +2,8 @@
   Student Name: Dennis Tran
   File Name: file-reader.hpp
   DSA II Project #5
+  header file for file-reader.cpp
+  reads the strings from twoStrings.txt
 ***************************************************************/
 
 #ifndef FILE_READER_HPP
