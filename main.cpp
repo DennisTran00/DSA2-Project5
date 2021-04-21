@@ -7,9 +7,10 @@
 
 #include <iostream>
 #include "file-reader.hpp"
+#include "LCSp2.hpp"
 
 int main () {
-
+	std::cout << "---------------- PART 1 ----------------\n" << std::endl;
 	LCSp1 part1;
 	FileReader reader;
 	if (reader.SetFile("twoStrings.txt") == false) {
@@ -26,6 +27,14 @@ int main () {
 
 	part1.constructLCS(i,j);
 	part1.printLCS();
+
+
+	std::cout << "---------------- PART 2 ----------------\n" << std::endl;
+	LCSp2 part2;
+
+	part2.computeLengths();
+  	part2.showPositionsArray();
+  	part2.directAccess();
 
 
 	return 0;
