@@ -22,8 +22,10 @@ class LCSp1
 		int** cArray;
 		int m;
 		int n;
+		int count;
 	public:
 		LCSp1();
+		LCSp1(std::string string1, std::string string2);
 		~LCSp1();
 		void buildCArray();
 		void setString1(std::string string1);
@@ -32,6 +34,7 @@ class LCSp1
 		std::string getString2();
 		void constructLCS(int i, int j);
 		void printLCS();
+		int getCount();
 
 };
 

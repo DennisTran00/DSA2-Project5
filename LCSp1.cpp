@@ -12,6 +12,15 @@ LCSp1::LCSp1() {
 	this->string2 = "";
 	this->m = 0;
 	this->n = 0;
+	this->count = 0;
+}
+
+LCSp1::LCSp1(std::string string1, std::string string2) {
+	this->string1 = string1;
+	this->string2 = string2;
+	this->m = 0;
+	this->n = 0;
+	this->count = 0;
 }
 
 LCSp1::~LCSp1() {
@@ -30,9 +39,6 @@ void LCSp1::buildCArray() {
 	for (int j = 0; j < m; ++j) {
 		this->cArray[j] = new int[n];
 	}
-
-	std::cout << "length(X) = " << this->string1.length() << std::endl;
-	std::cout << "length(Y) = " << this->string2.length() << std::endl;
 
 	//setting all values on the first row and column to 0
 	for (int i = 1; i < m; ++i) {
@@ -63,6 +69,7 @@ void LCSp1::constructLCS(int i, int j) {
 	} else if (string1[i-1] == string2[j-1]) {
 		constructLCS(i-1,j-1);
 		this->lcs << this->string1[i-1];
+		this->count++;
 	} else if (cArray[i-1][j] >= cArray[i][j-1]) {
 		constructLCS(i-1,j);
 	} else {
@@ -91,4 +98,8 @@ std::string LCSp1::getString1() {
 
 std::string LCSp1::getString2() {
 	return this->string2;
+}
+
+int LCSp1::getCount() {
+	return this->count;
 }

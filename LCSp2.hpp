@@ -21,11 +21,14 @@ class LCSp2
 		const static int POSLEN = 20;
 		const int LINELEN = 120;
 		int positions[POSLEN];
-		int totStrings = 0;
+		int totStrings;
+		double tenPercentLong, twentyPercentLong, fortyPercentLong;
+		double ninetyPercentShort, eightyPercentShort, fiftyPercentShort;
 	public:
+		LCSp2();
 		void computeLengths();
 		void directAccess();
-		void showPositionsArray();
+		void determineSimilarity(std::string stringX, std::string stringY);
 };
 
 #endif /*LCSP2_HPP*/

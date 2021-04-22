@@ -25,15 +25,17 @@ int main () {
 	int i = part1.getString1().length();
 	int j = part1.getString2().length();
 
+	std::cout << "length(X) = " << i << std::endl;
+	std::cout << "length(Y) = " << j << std::endl;
+
 	part1.constructLCS(i,j);
 	part1.printLCS();
 
-
+	std::cout << std::endl;
 	std::cout << "---------------- PART 2 ----------------\n" << std::endl;
 	LCSp2 part2;
 
 	part2.computeLengths();
-  	part2.showPositionsArray();
   	part2.directAccess();
 
 
